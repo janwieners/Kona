@@ -6,7 +6,7 @@ Short description: Experiments on image segmentation: identify text in digital i
 Intention, Überblick, Arbeitshypothesen
 ---------------------------------------
 
-Mit "Kona" habe ich mich 2007 damit beschäftigt, Text in Rastergraphiken von Nichttext zu differenzieren. "Kona" verfolgt drei der in den Arbeiten http://www.stanford.edu/class/ee368b/Projects/mkalman/report.html und http://mehr.sharif.edu/~scientia/v13n4pdf/katebi.pdf beschriebenen Alogirhtmen, die, basierend auf der diskreten Kosinustransformation (DCT) von nicht überlappenden 8x8 Bildblöcken, bestimmte Eigenschaften von Text in Bildern mit Text- und Grafikverbund charakterisieren.
+Mit "Kona" habe ich mich 2007 damit beschäftigt, Text in Rastergraphiken von Nichttext zu differenzieren. "Kona" verfolgt drei der in den Arbeiten http://www.stanford.edu/class/ee368b/Projects/mkalman/report.html und http://mehr.sharif.edu/~scientia/v13n4pdf/katebi.pdf beschriebenen Algorithmen, die - basierend auf der diskreten Kosinustransformation (DCT) von nicht überlappenden 8x8 Bildblöcken - bestimmte Eigenschaften von Text in Bildern mit Text- und Grafikverbund charakterisieren.
 
 Die verfolgten Ansätze basieren dabei auf den folgenden Arbeitshypothesen:
 
@@ -25,9 +25,10 @@ Ergebnisse
 ----------
 
 Die Verfahren I) und II) bieten interessante, aber nicht textisolierende Ergebnisse. Beiden eigen ist die Fähigkeit, leere Flächen im Bild zu finden und einzufärben, folglich Grafik und Text im Bild zu umranden.
+
 Angesteuert werden die Verfahren im Programm über die Menupunkte
-"Vorverarbeitung" > "Text Segmentieren: DCT Energy"
-"Vorverarbeitung" > "Text Segmentieren: DCT Bitrate"
-"Vorverarbeitung" > "Text Segmentieren: DCT Energy Train" (Trainieren mit DCT-Koeffizienten eines reinen Textausschnittes des jeweiligen Bildes), anschließend mit "Vorverarbeitung" > "Text Segmentieren: DCT Energy Train (Trainiert)" das Bild mit den trainierten Koeffizienten bearbeiten.
+- "Vorverarbeitung" > "Text Segmentieren: DCT Energy"
+- "Vorverarbeitung" > "Text Segmentieren: DCT Bitrate"
+- "Vorverarbeitung" > "Text Segmentieren: DCT Energy Train" (Trainieren mit DCT-Koeffizienten eines reinen Textausschnittes des jeweiligen Bildes), anschließend mit "Vorverarbeitung" > "Text Segmentieren: DCT Energy Train (Trainiert)" das Bild mit den trainierten Koeffizienten bearbeiten.
 
 Der Informationsgehalt des Eingabebildes muss bei allen Verfahren zunächst über "Vorverarbeitung" > "In s/w konvertieren" reduziert werden, da die o.a. Funktionen nur auf/mit 1-Bit Bildern arbeiten.
